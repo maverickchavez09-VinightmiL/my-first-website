@@ -1,0 +1,30 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --navy:#0a1633; --neon:#39ff14; --red:#d90429; --pink:#ff6fb5; --ink:#14213d; }
+body { font-family: "Trebuchet MS", Verdana, sans-serif; color: var(--ink); background: #fff; min-height: 100vh; }
+body::before { content:""; position: fixed; inset: 0; z-index: -1;
+  background: url("../images/photo.jpg") center / cover no-repeat; opacity: .35; }
+
+.hero { background: rgba(10,22,51,.82); color: var(--neon); text-align: center; padding: 56px 20px 44px; border-bottom: 4px solid var(--neon); }
+.hero h1 { font-size: clamp(2rem, 9vw, 3.6rem); text-shadow: 0 0 12px rgba(57,255,20,.7); }
+.hero p { margin-top: 12px; font-size: 1.1rem; }
+
+.lower { background: repeating-linear-gradient(to bottom, rgba(255,255,255,.9) 0, rgba(255,255,255,.9) 31px, rgba(60,90,160,.35) 31px, rgba(60,90,160,.35) 32px);
+  padding: 32px 20px 56px; min-height: 60vh; line-height: 32px; }
+.content { max-width: 640px; margin: 0 auto; }
+.content p { margin-bottom: 32px; font-size: 1.05rem; }
+.content img { display: block; width: 100%; max-width: 320px; margin: 0 auto 32px; border: 4px solid var(--navy); border-radius: 8px; }
+.btn { display: inline-block; background: var(--navy); color: var(--neon); padding: 0 24px; line-height: 44px; border-radius: 6px; text-decoration: none; font-weight: bold; border: 2px solid var(--neon); }
+.btn:hover, .btn:focus { background: var(--neon); color: var(--navy); }
+
+.title-box { position: relative; display: inline-block; background: var(--red); color: #fff; padding: 22px 48px; border: 6px solid #8d021c; border-radius: 10px; overflow: hidden; }
+.title-box::before, .title-box::after { content:""; position: absolute; width: 70px; height: 70px; border-radius: 50%; background: var(--pink); }
+.title-box::before { top: -28px; left: -28px; }
+.title-box::after { bottom: -28px; right: -28px; }
+.title-box h1 { position: relative; z-index: 1; font-size: clamp(2.6rem, 13vw, 5rem); color: #fff; text-shadow: 3px 3px 0 #8d021c; }
+.about-frame { background: var(--red); padding: 14px; border-radius: 10px; position: relative; overflow: hidden; }
+.about-frame::before, .about-frame::after { content:""; position: absolute; width: 90px; height: 90px; border-radius: 50%; background: var(--pink); }
+.about-frame::before { top: -40px; right: -40px; }
+.about-frame::after { bottom: -40px; left: -40px; }
+.about-text { position: relative; z-index: 1; background: rgba(255,255,255,.95); padding: 8px 18px; border-radius: 6px; line-height: 32px; }
+.about-text p { margin: 24px 0; }
+.back { margin-top: 32px; text-align: center; }
